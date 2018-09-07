@@ -1,0 +1,76 @@
+.collection{
+  background-color: #fff;
+
+  padding: 3rem 0;
+
+  &__wrapper{
+    text-align: center;
+  }
+  &-header{
+    font-family: Constantia;
+    font-size: 2.5rem;
+    font-weight: 200;
+
+    text-transform: uppercase;
+
+    color: #183A60;
+    padding-bottom: 2rem;
+
+    border-bottom: 1px solid #183A60;
+  }
+  &__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    &-item{
+      flex: 0 0 25%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      & p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: Constantia;
+
+        text-transform: uppercase;
+        margin-top: 1rem;
+        color: #183A60;
+      }
+    }
+  }
+  &__img{
+    height: 30rem;
+    width: 30rem;
+    background-size: cover;
+    &-1{
+      background-image: url(../img/watch/watch5.PNG);
+    }
+    &-2{
+      background-image: url(../img/gallery/1.png);
+    }
+    &-3{
+      background-image: url(../img/for/for-her-3.png);
+    }
+    &-4{
+      background-image: url(../img/gallery/2.png);
+    }
+    &-5{
+      background-image: url(../img/for/for-him-4.png);
+    }
+    &-6{
+      background-image: url(../img/gallery/3.png);
+    }
+    &-7{
+      background-image: url(../img/for/for-her-1.png);
+    }
+    &-8{
+      background-image: url(../img/gallery/4.png);
+    }
+  }
+
+}

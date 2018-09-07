@@ -1,0 +1,10 @@
+.animation{
+  visibility: visible;
+
+}
+.animation:hover{
+  visibility: visible;
+  top:50%;
+  transition: all 1s;
+  transition-delay: .4s;
+}

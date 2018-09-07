@@ -1,0 +1,57 @@
+.paris{
+  padding: 0;
+  background-color: #fff;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text{
+    flex: 0 0 50%;
+    text-align: right;
+    padding: 3rem 6rem;
+    &-header{
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      font-family: Constantia;
+      font-weight: 200;
+
+      color: #183A60;
+      margin-bottom: 2rem;
+
+      & a{
+        text-decoration: none;
+        color: inherit;
+      }
+
+    }
+    & button{
+      margin-top: 4rem;
+      padding: 1rem 2rem;
+      color: #183A60;
+      border: 1px solid #183A60;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 500;
+      transition: all .3s;
+      &:hover{
+        background-color: #183A60;
+        color: #fff;
+
+      }
+    }
+    & p{
+      font-size: 1.4rem;
+      font-family: "Fira Code";
+      color: #183A60;
+    }
+  }
+  &__img{
+    flex: 0 0 50%;
+    &-img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

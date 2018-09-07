@@ -1,0 +1,67 @@
+.footer{
+  padding: 4rem;
+  background-color: #183A60;
+  &-wrapper{
+
+    &-copyright{
+      padding-top: 5rem;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 200;
+      font-family: Constantia;
+    }
+
+  }
+  &__box{
+    display: flex;
+    align-items: start;
+  }
+  &__logo{
+    color: #fff;
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & img{
+      //padding-left: 3rem;
+      margin-bottom: 2rem;
+      width: 80%;
+      height: auto;
+    }
+    & h1{
+      font-size: 1.6rem;
+      font-family: Constantia;
+      font-weight: 200;
+      text-transform: uppercase;
+
+      padding-bottom: 3rem;
+    }
+    & p{
+      font-size: 1.2rem;
+      font-weight: 100;
+      font-family: Constantia;
+      padding-bottom: 2rem;
+      & a{
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    & h3{
+      font-size: 1.4rem;
+      font-weight: 200;
+      font-family: Constantia;
+      & a{
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  &__icon{
+    display: flex;
+    justify-content: flex-start;
+    &>*{
+      font-size: 2.5rem;
+      padding: 1rem;
+    }
+  }
+}

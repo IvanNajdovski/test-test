@@ -1,0 +1,39 @@
+.join{
+  background-color: lightgray;
+  text-align: center;
+  padding: 2rem;
+  & h1{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: Constantia;
+    font-weight: 200;
+    padding: 2rem 0;
+  }
+  & p{
+    font-family: Constantia;
+  }
+  &__form{
+    padding: 2rem 0 4rem 0;
+
+    &-form{
+      display: flex;
+      justify-content: center;
+    }
+    &-email{
+      padding: 1rem 2rem;
+      border: none;
+      flex: 0 0 40%;
+    }
+    &-submit{
+      width: 6rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: Constantia;
+      padding: 1rem 2rem;
+      border: none;
+      color: #fff;
+      background-color: #183A60;
+      flex: 0 0 10%;
+    }
+  }
+}
