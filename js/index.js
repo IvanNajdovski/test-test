@@ -69,45 +69,6 @@ $(document).ready(function() {
 
 });
     ///BTN MOVE FUNCTIONS
-    $(".wrapper-img").hover( () =>{
-        $("#btn-quick").css("opacity","100");
-        $("#btn-quick").css("transform","translateY(-50px)");
-        $("#btn-quick").css("transition","all .2s");
-        $("#btn-quick").css("z-index","25");
-        $("#btn-quick").css("visibility","visible");
-    });
-    $(".wrapper-img2").hover( () =>{
-        $("#btn-quick2").css("opacity","100");
-        $("#btn-quick2").css("transform","translateY(-50px)");
-        $("#btn-quick2").css("transition","all .2s");
-        $("#btn-quick2").css("z-index","25");
-        $("#btn-quick2").css("visibility","visible");
-    });
-    $(".wrapper-img3").hover( () =>{
-
-        $("#btn-quick3").css("opacity","100");
-        $("#btn-quick3").css("transform","translateY(-50px)");
-        $("#btn-quick3").css("transition","all .2s");
-        $("#btn-quick3").css("z-index","25");
-        $("#btn-quick3").css("visibility","visible");
-    });
-    $(".wrapper-img4").hover( () =>{
-        $("#btn-quick4").css("transform","translateY(-50px)");
-        $("#btn-quick4").css("opacity","100");
-        $("#btn-quick4").css("transition","all .2s");
-        $("#btn-quick4").css("z-index","25");
-        $("#btn-quick4").css("visibility","visible");
-    });
-    $(".wrapper-img5").hover( () =>{
-
-        $("#btn-quick5").css("opacity","100");
-        $("#btn-quick5").css("transform","translateY(-50px)");
-        $("#btn-quick5").css("transition","all .2s");
-        $("#btn-quick5").css("z-index","25");
-        $("#btn-quick5").css("visibility","visible");
-    });
-
-
     $(".btn-move").mouseleave( () =>{
         $(".btn-quick").css("transform","translateY(0)");
     $(".btn-quick").css("transition","all .4s");
@@ -126,45 +87,39 @@ $(document).ready(function() {
         $(".made__items-wraper-1:after").css("z-index","1");
 });
 
+
     ////FUNCTIONALYTY OF HOVER
-    $(".made__items-box-1 .made__label-item").mouseover((e)=>{
-        var item =e.target.className;
-        var arr = item.split("_")
-        var prefix = arr[arr.length-1]
-        $(".made__items-box-1 .wrapper-img").attr("src", `img/item-1/${prefix}.png`)
+    $('.made__items-box').hover(
+        function() {
+            $(this).addClass('tbl_navGroupHover'); },
+    );
+    $('.made__items-box').mouseleave(
+        function() {
+            $(this).removeClass('tbl_navGroupHover');
+        });
+    $(".wrapper-img").hover( () =>{
 
+        $(".tbl_navGroupHover .btn-quick").css("opacity","100");
+    $(".tbl_navGroupHover .btn-quick").css("transform","translateY(-50px)");
+    $(".tbl_navGroupHover .btn-quick").css("transition","all .2s");
+    $(".tbl_navGroupHover .btn-quick").css("z-index","25");
+    $(".tbl_navGroupHover .btn-quick").css("visibility","visible");
+});
 
-    })
-    $(".wrapper-img2").mouseover(()=>{
-
-    $(".wrapper-img").attr("src", `img/item-3/${prefix}.png`)
-
-
-})
-    $(".made__items-box-3 .made__label-item").mouseover((e)=>{
-        var item =e.target.className;
-    var arr = item.split("_")
-    var prefix = arr[arr.length-1]
-    $(".made__items-box-3 .wrapper-img3").attr("src", `img/item-3/${prefix}.png`)
-
-
-    })
-    $(".made__items-box-4 .made__label-item").mouseover((e)=>{
-        var item =e.target.className;
-    var arr = item.split("_")
-    var prefix = arr[arr.length-1]
-    $(".made__items-box-4 .wrapper-img4").attr("src", `img/item-4/${prefix}.png`)
-
-
-})
-    $(".made__items-box-5 .made__label-item").mouseover((e)=>{
-        var item =e.target.className;
-    var arr = item.split("_")
-    var prefix = arr[arr.length-1]
-    $(".made__items-box-5 .wrapper-img5").attr("src", `img/item-5/${prefix}.png`)
-
-
-})
-
+    var navigators = $('.made__items ');
+    navigators.find('.made__items-box').hover(
+        function () {
+            var elem = $(this);
+            var index = elem.index();
+            console.log(index);
+            $(".made__label-item").mouseover((e)=>{
+                var item =e.target.className;
+            var arr = item.split("_")
+            var prefix = arr[arr.length-1]
+            $(".tbl_navGroupHover .wrapper-img").attr("src", `img/item-${index+1}/${prefix}.png`)
+        })
+        }, function () {
+        }
+    );
 
 });
