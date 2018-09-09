@@ -20,8 +20,7 @@ $(document).ready(function() {
     $("#for-him").mouseover( () =>{
         $("#forhim").css("display", "flex");
 
-    $(".shopping").css("background-color","#fff");
-    $("#shoping").css("z-index", "50");
+    $(".shopping").css("background-color","#F6F6F6");
     $("#forhim").css("z-index", "1");
     $("#forher").css("z-index", "-1");
     $("#forbras").css("z-index", "-1");
@@ -33,7 +32,6 @@ $(document).ready(function() {
     $("#forbras").css("display", "none");
 
     $(".shopping").css("background-color","transparent");
-    $("#shoping").css("z-index", "0");
 
 
 });
@@ -51,7 +49,7 @@ $(document).ready(function() {
     $("#for-her").mouseover( () =>{
         $("#forher").css("display", "flex");
 
-    $(".shopping").css("background-color","#fff");
+    $(".shopping").css("background-color","#F6F6F6");
     $("#shoping").css("z-index", "50");
     $("#forhim").css("z-index", "-1");
     $("#forher").css("z-index", "1");
@@ -61,7 +59,7 @@ $(document).ready(function() {
     $("#for-bras").mouseover( () =>{
         $("#forbras").css("display", "flex");
 
-    $(".shopping").css("background-color","#fff");
+    $(".shopping").css("background-color","#F6F6F6");
     $("#shoping").css("z-index", "50");
     $("#forbras").css("z-index", "1");
     $("#forhim").css("display", "none");
@@ -91,20 +89,20 @@ $(document).ready(function() {
     ////FUNCTIONALYTY OF HOVER
     $('.made__items-box').hover(
         function() {
-            $(this).addClass('tbl_navGroupHover'); },
-    );
+            $(this).addClass('tbl_navGroupHover');
+        });
     $('.made__items-box').mouseleave(
         function() {
             $(this).removeClass('tbl_navGroupHover');
         });
-    $(".wrapper-img").hover( () =>{
+    $(".wrapper-img").hover( function() {
 
         $(".tbl_navGroupHover .btn-quick").css("opacity","100");
-    $(".tbl_navGroupHover .btn-quick").css("transform","translateY(-50px)");
-    $(".tbl_navGroupHover .btn-quick").css("transition","all .2s");
-    $(".tbl_navGroupHover .btn-quick").css("z-index","25");
-    $(".tbl_navGroupHover .btn-quick").css("visibility","visible");
-});
+        $(".tbl_navGroupHover .btn-quick").css("transform","translateY(-50px)");
+        $(".tbl_navGroupHover .btn-quick").css("transition","all .2s");
+        $(".tbl_navGroupHover .btn-quick").css("z-index","25");
+        $(".tbl_navGroupHover .btn-quick").css("visibility","visible");
+    });
 
     var navigators = $('.made__items ');
     navigators.find('.made__items-box').hover(

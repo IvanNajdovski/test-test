@@ -41,6 +41,10 @@ html {
       color: #fff; }
     .btn-quick:hover + .made__items-wraper-1:after {
       z-index: 1; }
+  .btn-small {
+    font-size: 1.2rem;
+    top: 60%;
+    left: 18%; }
 
 .nav {
   display: flex;
@@ -75,7 +79,7 @@ html {
 .doch {
   position: fixed !important;
   top: 0;
-  background-color: #fff !important; }
+  background-color: #F6F6F6 !important; }
 
 .shopping {
   z-index: 10;
@@ -97,8 +101,9 @@ html {
   list-style: none; }
   .sections__item {
     font-size: 1.4rem;
-    font-weight: 200;
+    font-weight: 400;
     text-transform: uppercase;
+    font-family: Arial;
     color: #193960;
     padding: .5rem 1rem;
     transform: scaleX(0.8); }
@@ -169,7 +174,7 @@ html {
   width: 100vw;
   top: 46px;
   display: none;
-  background-color: #fff;
+  background-color: #F6F6F6;
   align-items: center;
   justify-content: space-evenly; }
   .for-him__text {
@@ -211,7 +216,7 @@ html {
   width: 100vw;
   top: 46px;
   display: none;
-  background-color: #fff;
+  background-color: #F6F6F6;
   align-items: center;
   justify-content: space-evenly; }
   .for-her__text {
@@ -252,7 +257,7 @@ html {
   width: 100vw;
   top: 46px;
   display: none;
-  background-color: #fff;
+  background-color: #F6F6F6;
   align-items: center;
   justify-content: space-evenly; }
   .for-bras ul {
@@ -410,7 +415,7 @@ html {
       text-transform: uppercase;
       font-family: Constantia;
       font-weight: 200;
-      color: #183A60;
+      color: #111120;
       margin-bottom: 2rem; }
     .content__text p {
       font-size: 1.4rem;
@@ -525,7 +530,7 @@ html {
       text-transform: uppercase;
       font-family: Constantia;
       font-weight: 200;
-      color: #183A60;
+      color: #111120;
       margin-bottom: 2rem; }
       .paris__text-header a {
         text-decoration: none;
@@ -634,3 +639,89 @@ html {
     .footer__icon > * {
       font-size: 2.5rem;
       padding: 1rem; }
+
+.man {
+  padding-top: 10rem;
+  padding-bottom: 5rem; }
+  .man__content {
+    border-top: 1px solid #105A99;
+    display: flex; }
+    .man__content-sidebar-list > *:not(:last-child) {
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+    .man__content__sidebar {
+      margin-top: 2rem;
+      flex: 0 0 25%;
+      border-right: 1px solid #105A99; }
+
+.no-border p {
+  border-bottom: none; }
+
+.no-border ul > * {
+  padding-bottom: 2rem; }
+
+.man-wrap {
+  padding: 3rem 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .man-wrap > .made__items-box {
+    flex: 0 0 22%; }
+
+.man__label .made__label-item {
+  height: 1.5rem;
+  width: 1.5rem; }
+
+.man__header {
+  margin: 3rem 0 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: Constantia;
+  font-weight: 600;
+  color: #183A60; }
+
+.man__text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: Constantia;
+  font-weight: 200;
+  color: #183A60; }
+
+.history__main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/banner-2.jpg");
+  background-size: cover; }
+  .history__main__box {
+    flex: 0 0 45%;
+    text-align: center; }
+    .history__main__box p {
+      text-transform: uppercase;
+      font-weight: 200;
+      font-family: Constantia;
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+    .history__main__box h1 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: Constantia;
+      font-size: 4.5rem;
+      color: #fff;
+      padding: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+.history__history-text {
+  padding: 3rem; }
+  .history__history-text div h1 {
+    text-align: center;
+    font-family: Constantia;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #111120; }
+
+.font-left {
+  text-align: left !important; }
