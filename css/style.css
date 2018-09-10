@@ -129,6 +129,9 @@ html {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 50em) {
+    .form-form {
+      flex-direction: column; } }
   .form-form label {
     flex: 0 0 50%;
     padding-top: 1.5rem;
@@ -154,6 +157,9 @@ html {
     padding: 1rem 2rem;
     width: 90%;
     border: 1px solid #193960; }
+    @media only screen and (max-width: 50em) {
+      .form-form input {
+        width: 95%; } }
   .form-form-submit {
     display: inline;
     padding: 1.5rem 2rem !important;
@@ -164,6 +170,9 @@ html {
     align-self: center;
     justify-self: start !important;
     width: 20% !important; }
+    @media only screen and (max-width: 50em) {
+      .form-form-submit {
+        width: 40% !important; } }
 
 .form__name {
   flex: 0 0 50%; }
@@ -216,6 +225,10 @@ html {
   background-color: transparent;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 50em) {
+    .shopping {
+      flex-direction: column;
+      align-items: center; } }
   .shopping-box {
     display: flex; }
 
@@ -536,6 +549,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 50em) {
+      .content__wrapper {
+        flex-direction: column; } }
   .content__text {
     flex: 0 0 50%;
     text-align: center;
@@ -651,6 +667,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 50em) {
+      .paris__wrapper {
+        flex-direction: column; } }
   .paris__text {
     flex: 0 0 50%;
     text-align: right;

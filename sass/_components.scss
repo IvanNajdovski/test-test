@@ -134,6 +134,9 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  @media only screen and (max-width: $bp-medium){
+   flex-direction: column;
+  }
 
 
   & label{
@@ -165,6 +168,9 @@
     display: block;
     padding: 1rem 2rem;
     width: 90%;
+    @media only screen and (max-width: $bp-medium){
+      width: 95%;
+    }
 
     border: 1px solid #193960;
   }
@@ -179,6 +185,9 @@
     align-self: center;
     justify-self: start !important;
     width: 20% !important;
+    @media only screen and (max-width: $bp-medium){
+      width: 40% !important;
+    }
   }
 }
 .form{

@@ -22,7 +22,7 @@ app.get("/history",(req,res,next)=>{
 app.get("/expertise",(req,res,next)=>{
     res.sendFile(path.join(__dirname , "/expertise.html"));
 })
-app.get("/shop",(req,res,next)=>{
+app.get("/shops",(req,res,next)=>{
     res.sendFile(path.join(__dirname , "/shop.html"));
 })
 app.get("/concordia",(req,res,next)=>{
