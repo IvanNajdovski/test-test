@@ -30,7 +30,10 @@ html {
       width: 600px; } }
   @media only screen and (max-width: 37.5em) {
     .wrapper-center {
-      width: 500px; } }
+      width: 450px; } }
+  @media only screen and (max-width: 27.5em) {
+    .wrapper-center {
+      width: 320px; } }
 
 .text-curved {
   font-size: 1.4rem;
