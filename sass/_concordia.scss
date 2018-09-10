@@ -1,0 +1,131 @@
+.concordia-box{
+  padding-top: 20rem;
+}
+.concordia-wrapper{
+ position: relative;
+}
+.bg-white{
+  background-color: #fff;
+}
+.concordia__middle{
+  background-color: #fff;
+  &-box{
+    display: flex;
+    justify-content: center;
+
+    &>*{
+      flex: 0 0 33%
+    }
+  }
+  &-img{
+    & img{
+      width: 100%;
+      height: auto;
+
+    }
+  }
+  &-text{
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    position: relative;
+  }
+  &-left{
+    text-align: left;
+    flex: 0 0 50%;
+    border-right: 1px solid #183A60;
+    & h1{
+      font-size: 2.2rem;
+      font-family: Arial;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #183A60;
+      padding-bottom: 2rem;
+      padding-top: 5rem;
+    }
+    & > p:not(:last-child){
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+    }
+    & :last-child{
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+    }
+  }
+  &-right{
+    text-align: right;
+    flex: 0 0 50%;
+    border-left: 1px solid #183A60;
+    & h1{
+      font-size: 2.2rem;
+      font-family: Arial;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #183A60;
+      padding-bottom: 2rem;
+      padding-top: 5rem;
+    }
+    & > p:not(:last-child){
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+    }
+    & :last-child{
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+    }
+  }
+  &-abs{
+    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    top: 60%;
+    transform: translateY(-50%);
+    & > p:first-child{
+      padding-top: 1rem;
+    }
+    & > p:not(:last-child){
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem;
+      & span{font-size: 1.2rem;}
+    }
+    & :last-child{
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+.concordia-header{
+  background-color: #fff;
+  &-box{
+    padding: 1rem;
+    border-top: 1px solid #183A60;
+    border-bottom: 1px solid #183A60;
+
+    & h1{
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-family: Constantia;
+      font-weight: 200;
+      color: #183A60;
+    }
+  }
+}

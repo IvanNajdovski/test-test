@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
 
     //// NAV FUNCTION TO CHANGE ON SCROLL
@@ -119,5 +121,11 @@ $(document).ready(function() {
         }, function () {
         }
     );
+
+    $("#btn-video").click( function(){
+        $(".video-img").css("visibility","hidden");
+        $(".video-text").css("visibility","hidden");
+        $("#video iframe").attr('src', "https://www.youtube.com/embed/6FDAm2ZG7bY?modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showsearch=0" + '&autoplay=1');
+    });
 
 });

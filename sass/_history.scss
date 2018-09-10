@@ -6,6 +6,7 @@
 
   background-image: url("../img/banner-2.jpg");
   background-size: cover;
+  background-position: center;
 
   &__box{
     flex: 0 0 45%;
@@ -45,4 +46,76 @@
 }
 .font-left{
   text-align: left !important;
+}
+.history__video{
+  color: #193960;
+  text-align: center;
+  padding-bottom: 6rem;
+  &-holder{
+    position: relative;
+  }
+  &-box{
+    padding: 2rem 0;
+
+    & h1{
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+      font-family: Constantia;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: currentColor;
+
+      border-bottom: 1px solid #193960;
+
+    }
+    & p{
+      font-family: Constantia;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: 200;
+      color: currentColor;
+
+      padding: 2rem 0;
+    }
+  }
+}
+.video-img{
+  height: 675px;
+
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-679px);
+  & img{
+    width: 100%;
+    height: auto;
+  }
+}
+.video-text{
+  z-index: 3;
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  & p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: Constantia;
+    text-shadow: 1px 1px 2px rgba(0,0,0, .5);
+  }
+  & h1{
+
+
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Constantia;
+    text-shadow: 1px 1px 2px rgba(0,0,0, .5);
+
+    border: none;
+    padding: 2rem 0;
+
+  }
 }

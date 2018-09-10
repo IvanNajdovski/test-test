@@ -1,0 +1,63 @@
+.shop__content{
+  background-color: #fff;
+  padding: 2rem;
+
+  &-box-top{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &>*{
+      flex: 0 0 33%;
+    }
+    & img{
+      width: 100%;
+      height: auto;
+    }
+    &-middle{
+      text-align: center;
+
+      & h1{
+        font-weight: 200;
+        font-family: Constantia;
+
+        color: #183A60;
+        padding: 1.5rem 0;
+      }
+      & p{
+        color: #183A60;
+        padding: 1.5rem 0;
+      }
+    }
+  }
+  &-shop{
+    background-color: #fff;
+
+
+    & iframe{
+      position:absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+  }
+  &-shop-box{
+    padding: 2rem;
+    text-align: center;
+
+    & h1{
+      color: #183A60;
+      font-size: 1.8rem;
+      font-family: Constantia;
+      padding: 1.4rem;
+    }
+    & p{
+      padding: .5rem;
+
+    }
+  }
+}
+.map-holder{
+  position:relative;
+  height: 65rem;
+}

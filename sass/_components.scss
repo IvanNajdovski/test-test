@@ -2,6 +2,19 @@
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  @media only screen and (max-width: $bp-largest){
+    width: 1000px;
+  }
+  @media only screen and (max-width: $bp-large){
+    width: 800px;
+  }
+  @media only screen and (max-width: $bp-medium){
+    width: 600px;
+  }
+  @media only screen and (max-width: $bp-small){
+    width: 500px;
+  }
+
 }
 
 .text-curved{
@@ -11,14 +24,14 @@
   color: #183A60;
 }
 .btn{
-  position: absolute;
+
   padding: 1rem 2rem;
   text-align: center;
   top: 60%;
   left: 23%;
   transform: translate(-50% -50%);
   &-quick{
-
+    position: absolute;
     font-size: 1.7rem;
     font-weight: 200;
     background-color: transparent;
@@ -35,9 +48,145 @@
       z-index: 1;
     }
   }
+  &-blue{
+    background-color: #193960;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 200;
+
+    margin-bottom: 4rem;
+  }
   &-small{
     font-size: 1.2rem;
     top: 60%;
     left: 18%;
   }
+  &-video{
+    color: #fff;
+    background-color: transparent;
+
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "Droid Serif";
+    font-weight: 100;
+
+    border: 1px solid #fff;
+
+    padding: 1rem 3rem;
+  }
+  &-white{
+    background-color: transparent;
+    border: 1px solid #193960;
+    color:#193960;
+
+    text-transform: uppercase;
+    font-family: Constantia;
+    margin-top: 4rem;
+  }
+}
+.pd-top{
+  padding-top: 10rem;
+}
+.concordia__gallery{
+  padding: 2rem 0;
+  background-color: #fff;
+  &-box{
+    display: flex;
+    flex-wrap: wrap;
+    &-img{
+      padding: 1rem;
+      flex: 0 0 33%;
+      & img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+.concordia__form{
+  background-color: #fff;
+  padding: 1rem 0;
+  &-box{
+
+    & h1{
+      font-family: Constantia;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-align: center;
+      padding: 1.5rem;
+      border-bottom:1px solid #193960;
+    }
+  }
+}
+.form-form-box{
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-form{
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+
+  & label{
+    flex: 0 0 50%;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: Constantia;
+    color: #193960;
+    & span{
+      color: brown;
+      font-weight: 600;
+    }
+  }
+  & textarea{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    width: 95%;
+
+    border: 1px solid #193960;
+
+    font-family: Arial;
+  }
+  & input{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    padding: 1rem 2rem;
+    width: 90%;
+
+    border: 1px solid #193960;
+  }
+  &-submit {
+    display: inline;
+    padding: 1.5rem 2rem !important;
+    background-color: #193960;
+    border: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    align-self: center;
+    justify-self: start !important;
+    width: 20% !important;
+  }
+}
+.form{
+  &__name{
+    flex: 0 0 50%;
+  }
+  &__email{
+    flex: 0 0 50%
+  }
+  &__message{
+    flex: 0 0 100%
+  }
+
 }

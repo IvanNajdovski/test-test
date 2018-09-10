@@ -8,11 +8,29 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 45%; } }
 
 .wrapper-center {
   margin-left: auto;
   margin-right: auto;
   width: 1200px; }
+  @media only screen and (max-width: 75em) {
+    .wrapper-center {
+      width: 1000px; } }
+  @media only screen and (max-width: 62.5em) {
+    .wrapper-center {
+      width: 800px; } }
+  @media only screen and (max-width: 50em) {
+    .wrapper-center {
+      width: 600px; } }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper-center {
+      width: 500px; } }
 
 .text-curved {
   font-size: 1.4rem;
@@ -21,13 +39,13 @@ html {
   color: #183A60; }
 
 .btn {
-  position: absolute;
   padding: 1rem 2rem;
   text-align: center;
   top: 60%;
   left: 23%;
   transform: translate(-50% -50%); }
   .btn-quick {
+    position: absolute;
     font-size: 1.7rem;
     font-weight: 200;
     background-color: transparent;
@@ -41,10 +59,117 @@ html {
       color: #fff; }
     .btn-quick:hover + .made__items-wraper-1:after {
       z-index: 1; }
+  .btn-blue {
+    background-color: #193960;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 200;
+    margin-bottom: 4rem; }
   .btn-small {
     font-size: 1.2rem;
     top: 60%;
     left: 18%; }
+  .btn-video {
+    color: #fff;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-family: "Droid Serif";
+    font-weight: 100;
+    border: 1px solid #fff;
+    padding: 1rem 3rem; }
+  .btn-white {
+    background-color: transparent;
+    border: 1px solid #193960;
+    color: #193960;
+    text-transform: uppercase;
+    font-family: Constantia;
+    margin-top: 4rem; }
+
+.pd-top {
+  padding-top: 10rem; }
+
+.concordia__gallery {
+  padding: 2rem 0;
+  background-color: #fff; }
+  .concordia__gallery-box {
+    display: flex;
+    flex-wrap: wrap; }
+    .concordia__gallery-box-img {
+      padding: 1rem;
+      flex: 0 0 33%; }
+      .concordia__gallery-box-img img {
+        width: 100%;
+        height: auto; }
+
+.concordia__form {
+  background-color: #fff;
+  padding: 1rem 0; }
+  .concordia__form-box h1 {
+    font-family: Constantia;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #193960; }
+
+.form-form-box {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-form {
+  flex: 0 0 60%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  .form-form label {
+    flex: 0 0 50%;
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: Constantia;
+    color: #193960; }
+    .form-form label span {
+      color: brown;
+      font-weight: 600; }
+  .form-form textarea {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    width: 95%;
+    border: 1px solid #193960;
+    font-family: Arial; }
+  .form-form input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    padding: 1rem 2rem;
+    width: 90%;
+    border: 1px solid #193960; }
+  .form-form-submit {
+    display: inline;
+    padding: 1.5rem 2rem !important;
+    background-color: #193960;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    align-self: center;
+    justify-self: start !important;
+    width: 20% !important; }
+
+.form__name {
+  flex: 0 0 50%; }
+
+.form__email {
+  flex: 0 0 50%; }
+
+.form__message {
+  flex: 0 0 100%; }
 
 .nav {
   display: flex;
@@ -62,7 +187,7 @@ html {
       color: #fff; }
     .nav__icon p {
       font-size: 1.2rem;
-      font-weight: 50; }
+      font-weight: 100; }
   .nav__connection {
     display: flex;
     align-items: center;
@@ -84,7 +209,7 @@ html {
 .shopping {
   z-index: 10;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   background-color: transparent;
   display: flex;
   justify-content: space-between; }
@@ -99,6 +224,8 @@ html {
   padding: 2rem 1rem 0 1rem;
   display: flex;
   list-style: none; }
+  .sections > * :hover {
+    color: #196190; }
   .sections__item {
     font-size: 1.4rem;
     font-weight: 400;
@@ -126,8 +253,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10rem !important;
-  height: 100vh !important; }
+  width: 10rem;
+  height: 100vh; }
 
 .inner-content {
   display: flex;
@@ -588,7 +715,7 @@ html {
       border: none;
       color: #fff;
       background-color: #183A60;
-      flex: 0 0 10%; }
+      flex: 0 1 10%; }
 
 .footer {
   padding: 4rem;
@@ -694,7 +821,8 @@ html {
   justify-content: center;
   align-items: center;
   background-image: url("../img/banner-2.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center; }
   .history__main__box {
     flex: 0 0 45%;
     text-align: center; }
@@ -725,3 +853,212 @@ html {
 
 .font-left {
   text-align: left !important; }
+
+.history__video {
+  color: #193960;
+  text-align: center;
+  padding-bottom: 6rem; }
+  .history__video-holder {
+    position: relative; }
+  .history__video-box {
+    padding: 2rem 0; }
+    .history__video-box h1 {
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+      font-family: Constantia;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: currentColor;
+      border-bottom: 1px solid #193960; }
+    .history__video-box p {
+      font-family: Constantia;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: 200;
+      color: currentColor;
+      padding: 2rem 0; }
+
+.video-img {
+  height: 675px;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-679px); }
+  .video-img img {
+    width: 100%;
+    height: auto; }
+
+.video-text {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  .video-text p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: Constantia;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .video-text h1 {
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Constantia;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 2rem 0; }
+
+.shop__content {
+  background-color: #fff;
+  padding: 2rem; }
+  .shop__content-box-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .shop__content-box-top > * {
+      flex: 0 0 33%; }
+    .shop__content-box-top img {
+      width: 100%;
+      height: auto; }
+    .shop__content-box-top-middle {
+      text-align: center; }
+      .shop__content-box-top-middle h1 {
+        font-weight: 200;
+        font-family: Constantia;
+        color: #183A60;
+        padding: 1.5rem 0; }
+      .shop__content-box-top-middle p {
+        color: #183A60;
+        padding: 1.5rem 0; }
+  .shop__content-shop {
+    background-color: #fff; }
+    .shop__content-shop iframe {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+  .shop__content-shop-box {
+    padding: 2rem;
+    text-align: center; }
+    .shop__content-shop-box h1 {
+      color: #183A60;
+      font-size: 1.8rem;
+      font-family: Constantia;
+      padding: 1.4rem; }
+    .shop__content-shop-box p {
+      padding: .5rem; }
+
+.map-holder {
+  position: relative;
+  height: 65rem; }
+
+.concordia-box {
+  padding-top: 20rem; }
+
+.concordia-wrapper {
+  position: relative; }
+
+.bg-white {
+  background-color: #fff; }
+
+.concordia__middle {
+  background-color: #fff; }
+  .concordia__middle-box {
+    display: flex;
+    justify-content: center; }
+    .concordia__middle-box > * {
+      flex: 0 0 33%; }
+  .concordia__middle-img img {
+    width: 100%;
+    height: auto; }
+  .concordia__middle-text {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    position: relative; }
+  .concordia__middle-left {
+    text-align: left;
+    flex: 0 0 50%;
+    border-right: 1px solid #183A60; }
+    .concordia__middle-left h1 {
+      font-size: 2.2rem;
+      font-family: Arial;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #183A60;
+      padding-bottom: 2rem;
+      padding-top: 5rem; }
+    .concordia__middle-left > p:not(:last-child) {
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+    .concordia__middle-left :last-child {
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+  .concordia__middle-right {
+    text-align: right;
+    flex: 0 0 50%;
+    border-left: 1px solid #183A60; }
+    .concordia__middle-right h1 {
+      font-size: 2.2rem;
+      font-family: Arial;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #183A60;
+      padding-bottom: 2rem;
+      padding-top: 5rem; }
+    .concordia__middle-right > p:not(:last-child) {
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+    .concordia__middle-right :last-child {
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+  .concordia__middle-abs {
+    background-color: #fff;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    top: 60%;
+    transform: translateY(-50%); }
+    .concordia__middle-abs > p:first-child {
+      padding-top: 1rem; }
+    .concordia__middle-abs > p:not(:last-child) {
+      color: #183A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 2rem; }
+      .concordia__middle-abs > p:not(:last-child) span {
+        font-size: 1.2rem; }
+    .concordia__middle-abs :last-child {
+      color: #116A60;
+      font-family: Arial;
+      font-weight: 600;
+      font-size: 1.4rem;
+      padding-bottom: 1rem; }
+
+.concordia-header {
+  background-color: #fff; }
+  .concordia-header-box {
+    padding: 1rem;
+    border-top: 1px solid #183A60;
+    border-bottom: 1px solid #183A60; }
+    .concordia-header-box h1 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      font-family: Constantia;
+      font-weight: 200;
+      color: #183A60; }

@@ -19,6 +19,16 @@ app.get("/woman",(req,res,next)=>{
 app.get("/history",(req,res,next)=>{
     res.sendFile(path.join(__dirname , "/history.html"));
 })
+app.get("/expertise",(req,res,next)=>{
+    res.sendFile(path.join(__dirname , "/expertise.html"));
+})
+app.get("/shop",(req,res,next)=>{
+    res.sendFile(path.join(__dirname , "/shop.html"));
+})
+app.get("/concordia",(req,res,next)=>{
+    res.sendFile(path.join(__dirname , "/concordia.html"));
+})
+
 
 app.listen(port, () =>{
     console.log("Portal open on post 3000");
