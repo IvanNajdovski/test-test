@@ -2,6 +2,11 @@
   text-align: center;
   padding: 2rem 1rem 3rem 1rem;
   background-color: #fff;
+  @media only screen and (max-width: $bp-medium){
+
+    padding: 2rem 0 0 0;
+
+  }
   &__header{
     padding-bottom: .5rem;
 
@@ -12,12 +17,24 @@
     color: #183A60;
 
     border-bottom: 1px solid #183A60;
+
+    @media only screen and (max-width: $bp-medium){
+
+      font-size: 1.8rem;
+    }
   }
   &__items{
     display: flex;
     align-items: start;
     justify-content: center;
     background-color: #fff;
+    @media only screen and (max-width: $bp-medium){
+
+      flex-direction: column;
+    }
+
+
+
 
 
 
@@ -84,6 +101,17 @@
       justify-content: flex-start;
       align-items: center;
       margin: 0;
+      @media only screen and (max-width: $bp-medium){
+
+        padding: 5rem;
+      }
+      @media only screen and (max-width: $bp-small){
+
+        padding: 1rem;
+      }
+
+
+
         //&:hover > .made__items-wraper-1:after{
         //  z-index: 1;
         //}
@@ -109,11 +137,19 @@
 
         padding-bottom: 1rem;
       }
+      @media only screen and (max-width: $bp-medium){
+
+        font-size: 1rem;
+      }
       &-price{
         font-size: 1.4rem;
         font-weight: 200;
 
         color: #183A60;
+        @media only screen and (max-width: $bp-medium){
+
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -122,6 +158,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @media only screen and (max-width: $bp-medium){
+
+      padding: 1rem;
+    }
 
     &-item{
       margin: 0rem;
@@ -131,6 +171,10 @@
       height: 20px;
       border-radius: 50%;
       background-size: cover;
+      @media only screen and (max-width: $bp-medium){
+        width: 15px;
+        height: 15px;
+      }
 
     }
     &_0-2{

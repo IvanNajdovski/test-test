@@ -43,11 +43,11 @@ html {
 
 .btn {
   padding: 1rem 2rem;
-  text-align: center;
-  top: 60%;
-  left: 23%;
-  transform: translate(-50% -50%); }
+  text-align: center; }
   .btn-quick {
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
     position: absolute;
     font-size: 1.7rem;
     font-weight: 200;
@@ -57,6 +57,24 @@ html {
     z-index: 100;
     visibility: hidden;
     opacity: 0; }
+    @media only screen and (max-width: 800px) {
+      .btn-quick {
+        left: 41%; } }
+    @media only screen and (max-width: 700px) {
+      .btn-quick {
+        left: 40%; } }
+    @media only screen and (max-width: 600px) {
+      .btn-quick {
+        left: 37%; } }
+    @media only screen and (max-width: 500px) {
+      .btn-quick {
+        left: 35%; } }
+    @media only screen and (max-width: 400px) {
+      .btn-quick {
+        left: 33%; } }
+    @media only screen and (max-width: 300px) {
+      .btn-quick {
+        left: 29%; } }
     .btn-quick:hover {
       background-color: #183A60;
       color: #fff; }
@@ -225,7 +243,7 @@ html {
   background-color: transparent;
   display: flex;
   justify-content: space-between; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 400px) {
     .shopping {
       flex-direction: column;
       align-items: center; } }
@@ -240,6 +258,14 @@ html {
   padding: 2rem 1rem 0 1rem;
   display: flex;
   list-style: none; }
+  @media only screen and (max-width: 50em) {
+    .sections {
+      width: auto; } }
+  @media only screen and (max-width: 400px) {
+    .sections {
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1rem; } }
   .sections > * :hover {
     color: #196190; }
   .sections__item {
@@ -250,6 +276,10 @@ html {
     color: #193960;
     padding: .5rem 1rem;
     transform: scaleX(0.8); }
+    @media only screen and (max-width: 50em) {
+      .sections__item {
+        font-size: 1rem;
+        padding: 0; } }
     .sections__item-link {
       color: #193960;
       text-decoration: none;
@@ -432,6 +462,9 @@ html {
   text-align: center;
   padding: 2rem 1rem 3rem 1rem;
   background-color: #fff; }
+  @media only screen and (max-width: 50em) {
+    .made {
+      padding: 2rem 0 0 0; } }
   .made__header {
     padding-bottom: .5rem;
     font-family: Constantia;
@@ -440,11 +473,17 @@ html {
     text-transform: uppercase;
     color: #183A60;
     border-bottom: 1px solid #183A60; }
+    @media only screen and (max-width: 50em) {
+      .made__header {
+        font-size: 1.8rem; } }
   .made__items {
     display: flex;
     align-items: start;
     justify-content: center;
     background-color: #fff; }
+    @media only screen and (max-width: 50em) {
+      .made__items {
+        flex-direction: column; } }
     .made__items-wraper-1 {
       position: relative;
       height: 100%;
@@ -467,6 +506,12 @@ html {
       justify-content: flex-start;
       align-items: center;
       margin: 0; }
+      @media only screen and (max-width: 50em) {
+        .made__items-box {
+          padding: 5rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .made__items-box {
+          padding: 1rem; } }
       .made__items-box img {
         height: auto;
         width: 100%;
@@ -479,15 +524,24 @@ html {
         font-weight: 600;
         color: #183A60;
         padding-bottom: 1rem; }
+      @media only screen and (max-width: 50em) {
+        .made__items-box {
+          font-size: 1rem; } }
       .made__items-box-price {
         font-size: 1.4rem;
         font-weight: 200;
         color: #183A60; }
+        @media only screen and (max-width: 50em) {
+          .made__items-box-price {
+            font-size: 1rem; } }
   .made__label {
     padding: 1rem 4rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 50em) {
+      .made__label {
+        padding: 1rem; } }
     .made__label-item {
       margin: 0rem;
       border: 2px solid lightgray;
@@ -495,6 +549,10 @@ html {
       height: 20px;
       border-radius: 50%;
       background-size: cover; }
+      @media only screen and (max-width: 50em) {
+        .made__label-item {
+          width: 15px;
+          height: 15px; } }
     .made__label_0-2 {
       background-image: url("../img/colors/0-2.png"); }
     .made__label_0-3 {
@@ -556,6 +614,9 @@ html {
     flex: 0 0 50%;
     text-align: center;
     padding: 3rem; }
+    @media only screen and (max-width: 50em) {
+      .content__text {
+        padding: 1rem; } }
     .content__text-header {
       font-size: 2.5rem;
       text-transform: uppercase;
@@ -674,6 +735,9 @@ html {
     flex: 0 0 50%;
     text-align: right;
     padding: 3rem 6rem; }
+    @media only screen and (max-width: 50em) {
+      .paris__text {
+        padding: 1rem; } }
     .paris__text-header {
       font-size: 2.5rem;
       text-transform: uppercase;

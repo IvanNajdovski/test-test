@@ -13,6 +13,9 @@
     flex: 0 0 50%;
     text-align: right;
     padding: 3rem 6rem;
+    @media only screen and (max-width: $bp-medium){
+      padding: 1rem;
+    }
     &-header{
       font-size: 2.5rem;
       text-transform: uppercase;

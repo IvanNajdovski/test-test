@@ -49,7 +49,7 @@
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: $bp-medium){
+  @media only screen and (max-width: 400px){
     flex-direction: column;
     align-items: center;
   }
@@ -70,6 +70,14 @@
   width: 40rem;
   padding: 2rem 1rem 0 1rem;
   display: flex;
+  @media only screen and (max-width: $bp-medium){
+    width: auto;
+  }
+  @media only screen and (max-width: 400px){
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
 
   &>*{
     :hover{
@@ -89,6 +97,10 @@
 
     padding: .5rem 1rem;
     transform: scaleX(.8);
+    @media only screen and (max-width: $bp-medium){
+      font-size: 1rem;
+      padding: 0;
+    }
     &-link{
       color: #193960;
       text-decoration: none;
