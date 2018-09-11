@@ -10,6 +10,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
+app.set("view engine", "ejs");
+
 app.get("/man",(req,res,next)=>{
     res.sendFile(path.join(__dirname , "/man.html"));
 });
@@ -28,6 +30,10 @@ app.get("/shops",(req,res,next)=>{
 app.get("/concordia",(req,res,next)=>{
     res.sendFile(path.join(__dirname , "/concordia.html"));
 });
+app.get("/product",(req,res,next)=>{
+    res.sendFile(path.join(__dirname , "/product.html"));
+});
+
 
 
 app.listen(port, () =>{
