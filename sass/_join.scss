@@ -23,6 +23,14 @@
       padding: 1rem 2rem;
       border: none;
       flex: 0 0 40%;
+      @media only screen and (max-width: $bp-large){
+
+        flex: 0 0 60%;
+      }
+      @media only screen and (max-width: $bp-small){
+
+        flex: 2;
+      }
     }
     &-submit{
       width: 6rem;
@@ -34,6 +42,14 @@
       color: #fff;
       background-color: #183A60;
       flex: 0 1 10%;
+      @media only screen and (max-width: $bp-large){
+
+        flex: 0 0 20%;
+      }
+      @media only screen and (max-width: $bp-small){
+
+        flex: 1 ;
+      }
     }
   }
 }

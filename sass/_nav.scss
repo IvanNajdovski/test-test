@@ -49,7 +49,7 @@
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: 400px){
+  @media only screen and (max-width: $bp-smallest){
     flex-direction: column;
     align-items: center;
   }
@@ -64,12 +64,20 @@
 .logo{
   &__img{
     height: 8rem;
+    top: 5px;
+    right: 5px;
+
+    @media only screen and(max-width: $bp-smallest){
+      position: absolute;
+      padding: 1rem;
+    }
   }
 }
 .sections{
   width: 40rem;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   display: flex;
+  z-index: 10;
   @media only screen and (max-width: $bp-medium){
     width: auto;
   }
@@ -184,8 +192,10 @@
     }
   }
 }
-.for-him {
-  height: 40vh;
+.for-him,
+.for-her{
+  //height: 40vh;
+  padding: 5rem 0;
   position: absolute;
   width: 100vw;
   top: 46px;
@@ -193,13 +203,29 @@
   display: none;
   background-color: #F6F6F6;
 
-  align-items: center;
+  //align-items: center;
   justify-content: space-evenly;
+  @media only screen and (max-width: $bp-medium){
+    padding: 3rem 0;
+    flex-wrap: wrap;
+    //height: 30vh;
+  }
+
+  @media only screen and (max-width: $bp-smallest){
+    padding: 1rem 0;
+    flex-wrap: wrap;
+  }
 
   &__text {
     color: #183A60;
     padding: 2rem;
     flex: 0 0 20%;
+    @media only screen and (max-width: $bp-medium){
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem 2rem 0 2rem;
+    }
     & p {
       font-size: 1.6rem;
       font-weight: 200;
@@ -207,15 +233,30 @@
       padding: 1rem 1rem 1rem .5rem;
 
       border-bottom: 1px solid #183A60;
+      @media only screen and (max-width: $bp-medium){
+
+        display: none;
+
+      }
     }
     & ul {
       list-style: none;
-      padding: 1rem 1rem 1rem .5rem;
+      padding: 1rem 1rem 0 1rem;
+      @media only screen and (max-width: $bp-medium){
+
+        display: flex;
+        justify-items: center;
+      }
       & li {
         color: #193960;
         font-size: 1.2rem;
         font-weight: 200;
-        padding-bottom: 1rem;
+        padding-right: 1rem;
+        @media only screen and (max-width: $bp-smallest){
+
+          font-size: 1rem;
+          padding-bottom: 0;
+        }
         & a{
           text-decoration: none;
           color: inherit;
@@ -231,63 +272,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    & img {
-      width: 70%;
-    }
-    & p {
-      color: #183A60;
-      font-size: 1.1rem;
-    }
+    @media only screen and (max-width: $bp-medium){
+
+    flex: 0 0 25%;
   }
-}
-.for-her {
-  height: 40vh;
-  position: absolute;
-  width: 100vw;
-  top: 46px;
-  //flex: 0 0 100%
-  display: none;
-  background-color: #F6F6F6;
-
-  align-items: center;
-  justify-content: space-evenly;
-
-  &__text {
-    color: #183A60;
-    padding: 2rem;
-    flex: 0 0 20%;
-    & p {
-      font-size: 1.6rem;
-      font-weight: 200;
-      text-transform: uppercase;
-      padding: 1rem 1rem 1rem .5rem;
-
-      border-bottom: 1px solid #183A60;
-    }
-    & ul {
-      list-style: none;
-      padding: 1rem 1rem 1rem .5rem;
-      & li {
-        color: #193960;
-        font-size: 1.2rem;
-        font-weight: 200;
-        padding-bottom: 1rem;
-        & a{
-          text-decoration: none;
-          color: inherit;
-
-
-        }
-      }
-    }
-  }
-  & figure {
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
 
     & img {
       width: 70%;
@@ -298,6 +286,7 @@
     }
   }
 }
+
 .for-bras {
 
   position: absolute;
@@ -309,6 +298,9 @@
 
   align-items: center;
   justify-content: space-evenly;
+  @media only screen and (max-width: $bp-smallest){
+    top: 55px;
+  }
 
 
     & ul {
@@ -334,10 +326,3 @@
   }
 
 }
-//.shopping:hover{
-//  background-color: #fff;
-//}
-////.for-him-link:hover > .for-him{
-//
-//  display: flex !important;
-//}

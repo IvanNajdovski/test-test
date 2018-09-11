@@ -1,5 +1,8 @@
 
 
+
+
+
 $(document).ready(function() {
 
     //// NAV FUNCTION TO CHANGE ON SCROLL
@@ -70,14 +73,14 @@ $(document).ready(function() {
 });
     ///BTN MOVE FUNCTIONS
     $(".btn-move").mouseleave( () =>{
-        $(".btn-quick").css("transform","translateY(0)");
+        $(".btn-quick").css("bottom","10%");
     $(".btn-quick").css("transition","all .4s");
     $(".btn-quick").css("opacity","0");
     $(".btn-quick").css("z-index","25");
     $(".btn-quick").css("visibility","hidden");
 });
     $(".btn-out").mouseleave( () =>{
-        $(".btn-quick").css("transform","translateY(0)");
+        $(".btn-quick").css("bottom","10%");
     $(".btn-quick").css("transition","all .4s");
     $(".btn-quick").css("opacity","0");
     $(".btn-quick").css("z-index","25");
@@ -86,6 +89,110 @@ $(document).ready(function() {
     $("#btn-quick").mouseover( ()=>{
         $(".made__items-wraper-1:after").css("z-index","1");
 });
+//// CLICK FUCNTION ON BUTTON
+//     $(".btn-quick").on( 'click', ()=>{
+//         $("body").append('<div class="watch__sale" id="watch"></div>');
+//         $(".watch__sale").html(`<div class="watch__sale-box watch__wrapper">
+//     <div class="watch__sale-img">
+//         <img src="img/watch/watch1.png" alt="" class="watch-img">
+//         </div>
+//         <div class="watch__sale-text">
+//         <h1 class="watch__sale-name">GR - Bleu Océan</h1>
+//     <p class="watch__sale-price">€215.00</p>
+//     <p class="watch__sale-info">La GR - Grande Randonnée - est notre première montre à l'épreuve du temps et...</p>
+//     <h1 class="watch__sale-header">Click for complete description of the product</h1>
+//     <div class="watch__sale-color">
+//         <h2>Color of the collar</h2>
+//     <div class="watch__sale-color-box">
+//         <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
+//         <img src="img/colors/1-4.png" alt="">
+//         <img src="img/colors/1-2.png" alt="">
+//         <img src="img/colors/1-3.png" alt="">
+//
+//         </div>
+//         </div>
+//         <button class="btn btn-blue watch__sale__button">Order Now</button>
+//     </div>
+//     <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
+//     </div>`)
+//
+// });
+
+//         $(".btn-quick").on( 'click', ()=>{
+//         $("body").append('<div class="watch__sale-box watch__wrapper"></div>');
+//         $(".watch__sale-box").html(`
+//     <div class="watch__sale-img">
+//         <img src="img/watch/watch1.png" alt="" class="watch-img">
+//         </div>
+//         <div class="watch__sale-text">
+//         <h1 class="watch__sale-name">GR - Bleu Océan</h1>
+//     <p class="watch__sale-price">€215.00</p>
+//     <p class="watch__sale-info">La GR - Grande Randonnée - est notre première montre à l'épreuve du temps et...</p>
+//     <h1 class="watch__sale-header">Click for complete description of the product</h1>
+//     <div class="watch__sale-color">
+//         <h2>Color of the collar</h2>
+//     <div class="watch__sale-color-box">
+//         <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
+//         <img src="img/colors/1-4.png" alt="">
+//         <img src="img/colors/1-2.png" alt="">
+//         <img src="img/colors/1-3.png" alt="">
+//
+//         </div>
+//         </div>
+//         <button class="btn btn-blue watch__sale__button">Order Now</button>
+//     </div>
+//     <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
+//    `)
+//
+// });
+
+    $('.btn-quick').on("click",function(){
+        //console.log($(this).parent().children('img').attr('src'))
+        var watchImg = $(this).parent().children('img').attr('src');
+        var  watch = watchImg.split(".")[0].split("");
+        var img = watch[watch.length-1]
+
+        $("#watch").append('<div class="watch__sale-box watch__wrapper"></div>');
+    $(".watch__sale-box").html(`
+    <div class="watch__sale-img">
+        <img src="img/watch/watch${img}.png" alt="" class="watch-img">
+        </div>
+        <div class="watch__sale-text">
+        <h1 class="watch__sale-name">GR - Bleu Océan</h1>
+    <p class="watch__sale-price">€215.00</p>
+    <p class="watch__sale-info">La GR - Grande Randonnée - est notre première montre à l'épreuve du temps et...</p>
+    <h1 class="watch__sale-header">Click for complete description of the product</h1>
+    <div class="watch__sale-color">
+        <h2>Color of the collar</h2>
+    <div class="watch__sale-color-box">
+        <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
+        <img src="img/colors/1-4.png" alt="">
+        <img src="img/colors/1-2.png" alt="">
+        <img src="img/colors/1-3.png" alt="">
+
+        </div>
+        </div>
+        <button class="btn btn-blue watch__sale__button">Order Now</button>
+    </div>
+    <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
+    `);
+        $("#watch").css("display","flex");
+
+});
+    $(document).on('click', '#close', function() {
+        $(".watch__sale").empty();
+        $("#watch").css("display","none");
+    });
+
+    // $('#close').click(function() {
+    //     $("#watch").empty();
+    // });
+
+    $(".button-close").click( ()=> {
+        $("#watch").empty()
+    $("#watch").css("display","none");
+    });
+
 
 
     ////FUNCTIONALYTY OF HOVER
@@ -100,7 +207,15 @@ $(document).ready(function() {
     $(".wrapper-img").hover( function() {
 
         $(".tbl_navGroupHover .btn-quick").css("opacity","100");
-        $(".tbl_navGroupHover .btn-quick").css("transform","translateY(-50px)");
+        $(".tbl_navGroupHover .btn-quick").css("bottom","40%");
+        $(".tbl_navGroupHover .btn-quick").css("transition","all .2s");
+        $(".tbl_navGroupHover .btn-quick").css("z-index","25");
+        $(".tbl_navGroupHover .btn-quick").css("visibility","visible");
+    });
+    $(".wrapper-img").click( function() {
+
+        $(".tbl_navGroupHover .btn-quick").css("opacity","100");
+        $(".tbl_navGroupHover .btn-quick").css("bottom","40%");
         $(".tbl_navGroupHover .btn-quick").css("transition","all .2s");
         $(".tbl_navGroupHover .btn-quick").css("z-index","25");
         $(".tbl_navGroupHover .btn-quick").css("visibility","visible");
@@ -129,3 +244,4 @@ $(document).ready(function() {
     });
 
 });
+

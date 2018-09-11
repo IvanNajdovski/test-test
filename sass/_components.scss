@@ -19,7 +19,11 @@
   }
 
 }
-
+.watch__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
 .text-curved{
   font-size: 1.4rem;
   font-weight: 200;
@@ -32,36 +36,24 @@
   text-align: center;
 
   &-quick{
-    top: 60%;
-    left: 20%;
-    transform: translate(-50%, -50%);
+    width: 15rem;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 200;
     background-color: transparent;
     color: #183A60;
     border: 1px solid #183A60;
     z-index: 100;
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
-    @media only screen and (max-width: 800px){
-      left: 41%;
+    @media only screen and (max-width: $bp-largest){
+
+      padding: 1rem 1rem;
     }
-    @media only screen and (max-width: 700px){
-      left: 40%;
-    }
-    @media only screen and (max-width: 600px){
-      left: 37%;
-    }
-    @media only screen and (max-width: 500px){
-      left: 35%;
-    }
-    @media only screen and (max-width: 400px){
-      left: 33%;
-    }
-    @media only screen and (max-width: 300px){
-      left: 29%;
-    }
+
 
     &:hover{
       background-color: #183A60;
