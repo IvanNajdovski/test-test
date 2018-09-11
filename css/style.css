@@ -82,9 +82,7 @@ body {
     font-weight: 200;
     margin-bottom: 4rem; }
   .btn-small {
-    font-size: 1.2rem;
-    top: 60%;
-    left: 18%; }
+    font-size: 1.2rem; }
   .btn-video {
     color: #fff;
     background-color: transparent;
@@ -676,7 +674,7 @@ body {
     width: 30rem;
     background-size: cover; }
     .collection__img-1 {
-      background-image: url(../img/watch/watch5.png); }
+      background-image: url(../img/watch/watch5/watch5.png); }
     .collection__img-2 {
       background-image: url(../img/gallery/1.png); }
     .collection__img-3 {

@@ -90,72 +90,28 @@ $(document).ready(function() {
         $(".made__items-wraper-1:after").css("z-index","1");
 });
 //// CLICK FUCNTION ON BUTTON
-//     $(".btn-quick").on( 'click', ()=>{
-//         $("body").append('<div class="watch__sale" id="watch"></div>');
-//         $(".watch__sale").html(`<div class="watch__sale-box watch__wrapper">
-//     <div class="watch__sale-img">
-//         <img src="img/watch/watch1.png" alt="" class="watch-img">
-//         </div>
-//         <div class="watch__sale-text">
-//         <h1 class="watch__sale-name">GR - Bleu Océan</h1>
-//     <p class="watch__sale-price">€215.00</p>
-//     <p class="watch__sale-info">La GR - Grande Randonnée - est notre première montre à l'épreuve du temps et...</p>
-//     <h1 class="watch__sale-header">Click for complete description of the product</h1>
-//     <div class="watch__sale-color">
-//         <h2>Color of the collar</h2>
-//     <div class="watch__sale-color-box">
-//         <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
-//         <img src="img/colors/1-4.png" alt="">
-//         <img src="img/colors/1-2.png" alt="">
-//         <img src="img/colors/1-3.png" alt="">
-//
-//         </div>
-//         </div>
-//         <button class="btn btn-blue watch__sale__button">Order Now</button>
-//     </div>
-//     <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
-//     </div>`)
-//
-// });
 
-//         $(".btn-quick").on( 'click', ()=>{
-//         $("body").append('<div class="watch__sale-box watch__wrapper"></div>');
-//         $(".watch__sale-box").html(`
-//     <div class="watch__sale-img">
-//         <img src="img/watch/watch1.png" alt="" class="watch-img">
-//         </div>
-//         <div class="watch__sale-text">
-//         <h1 class="watch__sale-name">GR - Bleu Océan</h1>
-//     <p class="watch__sale-price">€215.00</p>
-//     <p class="watch__sale-info">La GR - Grande Randonnée - est notre première montre à l'épreuve du temps et...</p>
-//     <h1 class="watch__sale-header">Click for complete description of the product</h1>
-//     <div class="watch__sale-color">
-//         <h2>Color of the collar</h2>
-//     <div class="watch__sale-color-box">
-//         <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
-//         <img src="img/colors/1-4.png" alt="">
-//         <img src="img/colors/1-2.png" alt="">
-//         <img src="img/colors/1-3.png" alt="">
-//
-//         </div>
-//         </div>
-//         <button class="btn btn-blue watch__sale__button">Order Now</button>
-//     </div>
-//     <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
-//    `)
-//
-// });
 
     $('.btn-quick').on("click",function(){
         //console.log($(this).parent().children('img').attr('src'))
-        var watchImg = $(this).parent().children('img').attr('src');
-        var  watch = watchImg.split(".")[0].split("");
-        var img = watch[watch.length-1]
+        const watchImg = $(this).parent().children('img').attr('src');
+        const  watch = watchImg.split(".")[0].split("/");
+        const watchLink = watch[watch.length-2].split("")
+
+        const img = watchLink[watchLink.length-1]
+        console.log(img)
+        const watchCollar = $(this).parents('div.made__items-box').children('div.made__label').children("a").children('div');
+        const collarColor =[];
+        for (let item of watchCollar){
+            var watchClass = item.classList[1].split("_");
+            collarColor.push(watchClass[watchClass.length-1])
+        }
+
 
         $("#watch").append('<div class="watch__sale-box watch__wrapper"></div>');
     $(".watch__sale-box").html(`
     <div class="watch__sale-img">
-        <img src="img/watch/watch${img}.png" alt="" class="watch-img">
+        <img src="img/watch/watch${img}/watch${img}.png" alt="" class="watch-img">
         </div>
         <div class="watch__sale-text">
         <h1 class="watch__sale-name">GR - Bleu Océan</h1>
@@ -165,10 +121,7 @@ $(document).ready(function() {
     <div class="watch__sale-color">
         <h2>Color of the collar</h2>
     <div class="watch__sale-color-box">
-        <img src="img/colors/1-1.png" alt="" class="watch__sale-color-box-item">
-        <img src="img/colors/1-4.png" alt="">
-        <img src="img/colors/1-2.png" alt="">
-        <img src="img/colors/1-3.png" alt="">
+        
 
         </div>
         </div>
@@ -176,13 +129,35 @@ $(document).ready(function() {
     </div>
     <button class="button-close" "><i class="fas fa-times" id="close"></i></button>
     `);
-        $("#watch").css("display","flex");
+        for(let item of collarColor) {
+            $(".watch__sale-color-box").append(`<img src="img/colors/${item}.png" alt="image for watch ${item}" class="watch__collar-colors">`)
+        }
+            $("#watch").css("display","flex");
 
 });
     $(document).on('click', '#close', function() {
         $(".watch__sale").empty();
         $("#watch").css("display","none");
     });
+    if($(".watch-img")){
+
+    }
+
+    $(document).on('click', '.watch__collar-colors', function() {
+        const watchClassColor = $(this).attr('src').split(".");
+        const changeCollarColor = watchClassColor[0].split("/");
+        console.log(changeCollarColor)
+        const imageCollar = changeCollarColor[changeCollarColor.length-1];
+        //console.log(changeCollarColor)
+        const folder =  $(".watch-img").attr("src").split(".")
+        console.log(folder)
+        const link = folder[0].split("/")
+        const linkTwo = link[0]+"/"+link[1]+"/"+link[2]+"/"
+        $(".watch-img").attr("src", `${linkTwo}/${imageCollar}.png`);
+        //console.log(mother)
+        //console.log(imageCollar)
+    });
+
 
     // $('#close').click(function() {
     //     $("#watch").empty();
@@ -231,8 +206,20 @@ $(document).ready(function() {
                 var item =e.target.className;
             var arr = item.split("_")
             var prefix = arr[arr.length-1]
-            $(".tbl_navGroupHover .wrapper-img").attr("src", `img/item-${index+1}/${prefix}.png`)
-        })
+            if(index < 5) {
+                $(".tbl_navGroupHover .wrapper-img").attr("src", `img/watch/watch${index + 1}/${prefix}.png`)
+            }else if(index < 10) {
+                $(".tbl_navGroupHover .wrapper-img").attr("src", `img/watch/watch${(index + 1)-5}/${prefix}.png`)
+            }else if(index < 15) {
+                $(".tbl_navGroupHover .wrapper-img").attr("src", `img/watch/watch${(index + 1)-10}/${prefix}.png`)
+            }
+            else if(index < 20) {
+                $(".tbl_navGroupHover .wrapper-img").attr("src", `img/watch/watch${(index + 1)-15}/${prefix}.png`)
+            }
+            else if(index < 25) {
+                $(".tbl_navGroupHover .wrapper-img").attr("src", `img/watch/watch${(index + 1)-20}/${prefix}.png`)
+            }
+            })
         }, function () {
         }
     );
