@@ -669,14 +669,14 @@ body {
         font-weight: 400;
         font-family: Constantia;
         text-transform: uppercase;
-        margin-top: 1rem;
+        margin-top: 1.1rem;
         color: #183A60; }
   .collection__img {
     height: 30rem;
     width: 30rem;
     background-size: cover; }
     .collection__img-1 {
-      background-image: url(../img/watch/watch5.PNG); }
+      background-image: url(../img/watch/watch5.png); }
     .collection__img-2 {
       background-image: url(../img/gallery/1.png); }
     .collection__img-3 {
