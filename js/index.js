@@ -110,7 +110,7 @@ $(document).ready(function () {
 //// CLICK FUCNTION ON BUTTON
 
 
-    $('.btn-quick').on("click", function () {
+    $('.btn-quick').click(function () {
         //console.log($(this).parent().children('img').attr('src'))
         const watchImg = $(this).parent().children('img').attr('src');
         const watch = watchImg.split(".")[0].split("/");
@@ -124,8 +124,9 @@ $(document).ready(function () {
             var watchClass = item.classList[1].split("_");
             collarColor.push(watchClass[watchClass.length - 1])
         }
-
-
+  //IF YOU HAVE THE CODE IN THE PAGE AND YOU JUST CHANGE THE ATTRIBTES
+  //      $(".watch-img").attr("src",`img/watch/watch${img}/watch${img}.png`)
+  //CREATING THE DIV WITH THE CONTENT AND APPENDING TO THE PAGE
         $("#watch").append('<div class="watch__sale-box watch__wrapper"></div>');
         $(".watch__sale-box").html(`
     <div class="watch__sale-img">
@@ -139,7 +140,7 @@ $(document).ready(function () {
     <div class="watch__sale-color">
         <h2>Color of the collar</h2>
     <div class="watch__sale-color-box">
-        
+
 
         </div>
         </div>
@@ -147,22 +148,24 @@ $(document).ready(function () {
     </div>
     <button class="button-close"><i class="fas fa-times" id="close"></i></button>
     `);
+  //FILLING THE COLOR BOXES
         for (let item of collarColor) {
             $(".watch__sale-color-box").append(`<img src="img/colors/${item}.png" alt="image for watch ${item}" class="watch__collar-colors">`)
         }
         $("#watch").css("display", "flex");
 
     });
-    $(document).on('click', '#close', function () {
+  //FUNCTION TO DELETE OR CHANGE THE CONTENT OF THE POP UP
+    $(document).on('click', '.button-close', function (event,e) {
         $(".watch__sale").empty();
+  //IF YOU HAVE THE ELEMENT ON THE PAGE AND WANT TO REMOVE THE PREVIOUS COLORS
+        //$(".watch__sale-color-box").empty();
         $("#watch").css("display", "none");
     });
-    if ($(".watch-img")) {
 
-    }
-
-    $(document).on('click', '.watch__collar-colors', function () {
-
+  //GETTING YOU TO THE WATCH PAGE
+    $(document).on('click', '.watch__collar-colors', function (event,e) {
+        event.preventDefault();
         const watchClassColor = $(this).attr('src').split(".");
         const changeCollarColor = watchClassColor[0].split("/");
 
@@ -175,17 +178,6 @@ $(document).ready(function () {
         $(".watch-img").attr("src", `${linkTwo}/${imageCollar}.png`);
 
     });
-
-
-
-    $(".button-close").click(() => {
-        $("#watch"
-).
-    empty()
-    $("#watch").css("display", "none");
-})
-    ;
-
 
     ////FUNCTIONALYTY OF HOVER
     $('.made__items-box').hover(
@@ -240,13 +232,13 @@ $(document).ready(function () {
         }, function () {
         }
     );
-
+  //VIDEO FUNCTIONALITY
     $("#btn-video").click(function () {
         $(".video-img").css("visibility", "hidden");
         $(".video-text").css("visibility", "hidden");
         $("#video iframe").attr('src', "https://www.youtube.com/embed/6FDAm2ZG7bY?modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showsearch=0" + '&autoplay=1');
     });
-
+  //GOING TO THE PRODUCT PAGE and PASSING ALL THE VARIABLES IN THE PARAMS
     $(".made__label-link").click(function () {
         const backg =$(this).children("div").css("background-image")
         const curentImg =$(this).children("div").css("background-image").split("/")
