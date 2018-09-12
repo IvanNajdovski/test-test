@@ -193,6 +193,19 @@ body {
 .form__message {
   flex: 0 0 100%; }
 
+.youtube__video {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; }
+
+.youtube__video-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; }
+
 .nav {
   display: flex;
   align-items: center;
@@ -1004,10 +1017,12 @@ body {
       padding: 2rem 0; }
 
 .video-img {
-  height: 675px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  z-index: 2;
-  transform: translateY(-679px); }
+  z-index: 2; }
   .video-img img {
     width: 100%;
     height: auto; }
