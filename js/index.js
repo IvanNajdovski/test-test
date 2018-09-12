@@ -249,9 +249,9 @@ $(document).ready(function () {
 
     $(".made__label-link").click(function () {
         const backg =$(this).children("div").css("background-image")
-        const curentImg =$(this).children("div").css("background-image").split(".")[0].split("/");
-        const thisColor =curentImg[curentImg.length-1]
-        console.log(thisColor)
+        const curentImg =$(this).children("div").css("background-image").split("/")
+        const thisColor =curentImg[curentImg.length-1].split(".")[0];
+        
 
         const madeColors = $(this).parent("div.made__label").children("a").children("div")
         const itemColors = [];
@@ -264,7 +264,7 @@ $(document).ready(function () {
         const itemSplit = madeItem.split("/")[2].split("");
         const itemIndex = itemSplit[itemSplit.length-1]
         console.log(itemIndex)
-        $(this).attr("href", `product?modelIndex=${itemIndex}&modelColors=${itemColors}&color=${backg}`)
+        $(this).attr("href", `product?modelIndex=${itemIndex}&modelColors=${itemColors}&color=${thisColor}`)
         // $(this).children("div")
 
     })
