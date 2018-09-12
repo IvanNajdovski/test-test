@@ -247,7 +247,8 @@ $(document).ready(function () {
         $("#video iframe").attr('src', "https://www.youtube.com/embed/6FDAm2ZG7bY?modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showsearch=0" + '&autoplay=1');
     });
 
-    $(".made__label-link").hover(function () {
+    $(".made__label-link").click(function () {
+        //const backg =$(this).children("div").css("background-image")
         const curentImg =$(this).children("div").css("background-image").split(".")[0].split("/");
         const thisColor =curentImg[curentImg.length-1]
         console.log(thisColor)
