@@ -251,7 +251,7 @@ $(document).ready(function () {
         const backg =$(this).children("div").css("background-image")
         const curentImg =$(this).children("div").css("background-image").split("/")
         const thisColor =curentImg[curentImg.length-1].split(".")[0];
-        
+
 
         const madeColors = $(this).parent("div.made__label").children("a").children("div")
         const itemColors = [];
