@@ -58,11 +58,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
-                  <caret line="256" column="51" lean-forward="false" selection-start-line="256" selection-start-column="51" selection-end-line="256" selection-end-column="51" />
+                <state relative-caret-position="493">
+                  <caret line="397" column="10" lean-forward="true" selection-start-line="395" selection-start-column="4" selection-end-line="397" selection-end-column="10" />
                   <folding>
                     <element signature="n#style#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="e#19552#19557#0" expanded="true" />
@@ -71,7 +71,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="history.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="history.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/history.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-126">
@@ -177,8 +177,8 @@
           <file leaf-file-name="expertise.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/expertise.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-77">
-                  <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+                <state relative-caret-position="721">
+                  <caret line="328" column="6" lean-forward="false" selection-start-line="328" selection-start-column="6" selection-end-line="328" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -420,12 +420,12 @@
       <workItem from="1536655109651" duration="3140000" />
       <workItem from="1536665659165" duration="23735000" />
       <workItem from="1536693628671" duration="10983000" />
-      <workItem from="1536737537592" duration="3786000" />
+      <workItem from="1536737537592" duration="4034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132814000" />
+    <option name="totallyTimeSpent" value="133062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -807,17 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="256" column="51" lean-forward="false" selection-start-line="256" selection-start-column="51" selection-end-line="256" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#19552#19557#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/_components.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
@@ -856,10 +845,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="397" column="10" lean-forward="true" selection-start-line="395" selection-start-column="4" selection-end-line="397" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#19552#19557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/expertise.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="262" column="38" lean-forward="false" selection-start-line="262" selection-start-column="38" selection-end-line="262" selection-end-column="38" />
+        <state relative-caret-position="721">
+          <caret line="328" column="6" lean-forward="false" selection-start-line="328" selection-start-column="6" selection-end-line="328" selection-end-column="6" />
           <folding />
         </state>
       </provider>
