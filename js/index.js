@@ -162,6 +162,7 @@ $(document).ready(function () {
     }
 
     $(document).on('click', '.watch__collar-colors', function () {
+
         const watchClassColor = $(this).attr('src').split(".");
         const changeCollarColor = watchClassColor[0].split("/");
 
@@ -246,7 +247,11 @@ $(document).ready(function () {
         $("#video iframe").attr('src', "https://www.youtube.com/embed/6FDAm2ZG7bY?modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&showsearch=0" + '&autoplay=1');
     });
 
-    $(".made__label-link").click(function () {
+    $(".made__label-link").hover(function () {
+        const curentImg =$(this).children("div").css("background-image").split(".")[0].split("/");
+        const thisColor =curentImg[curentImg.length-1]
+        console.log(thisColor)
+
         const madeColors = $(this).parent("div.made__label").children("a").children("div")
         const itemColors = [];
         for (let item of madeColors) {
@@ -258,7 +263,7 @@ $(document).ready(function () {
         const itemSplit = madeItem.split("/")[2].split("");
         const itemIndex = itemSplit[itemSplit.length-1]
         console.log(itemIndex)
-        $(this).attr("href", `product?modelIndex=${itemIndex}&modelColors=${itemColors}`)
+        $(this).attr("href", `product?modelIndex=${itemIndex}&modelColors=${itemColors}&color=${thisColor}`)
         // $(this).children("div")
 
     })
