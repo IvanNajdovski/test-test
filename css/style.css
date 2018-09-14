@@ -1234,7 +1234,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 80%;
+        height: 90%;
         width: 90%; } }
     .watch__sale-box > * {
       flex: 0 0 50%; }
