@@ -1248,7 +1248,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .watch__sale-text {
         align-items: center;
-        padding: 2rem 2rem; } }
+        padding: 1rem; } }
   .watch__sale-name {
     font-size: 1.8rem;
     font-family: Constantia;

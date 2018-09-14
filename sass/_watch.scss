@@ -49,7 +49,7 @@
     padding: 2rem;
     @media only screen and (max-width: $bp-small) {
       align-items: center;
-      padding: 2rem 2rem;
+      padding: 1rem;
     }
   }
   &-name{
@@ -110,7 +110,7 @@
   &-color{
     padding: 4rem 0;
     @media only screen and (max-width: $bp-small) {
-      
+
       padding: 1rem 0;
     }
     & h2{
