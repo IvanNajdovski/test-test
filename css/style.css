@@ -1222,7 +1222,8 @@ body {
     width: 80%;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex: 0 0 40%; }
   .watch__sale-box {
     background-color: #F6F6F6;
     display: flex;
@@ -1239,7 +1240,7 @@ body {
       flex: 0 0 50%; }
       @media only screen and (max-width: 37.5em) {
         .watch__sale-box > * {
-          flex: 0 0 45%; } }
+          flex: 0 0 55%; } }
   .watch__sale-text {
     display: flex;
     flex-direction: column;
