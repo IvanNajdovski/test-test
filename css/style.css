@@ -1219,6 +1219,9 @@ body {
     display: flex;
     align-items: center;
     position: relative; }
+    @media only screen and (max-width: 37.5em) {
+      .watch__sale-box {
+        flex-direction: column; } }
     .watch__sale-box > * {
       flex: 0 0 50%; }
   .watch__sale-text {
