@@ -1247,7 +1247,8 @@ body {
     padding: 2rem; }
     @media only screen and (max-width: 37.5em) {
       .watch__sale-text {
-        padding: 2rem 0; } }
+        align-items: center;
+        padding: 2rem 2rem; } }
   .watch__sale-name {
     font-size: 1.8rem;
     font-family: Constantia;
@@ -1258,7 +1259,8 @@ body {
     border-bottom: 1px solid #183A60; }
     @media only screen and (max-width: 37.5em) {
       .watch__sale-name {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        padding: 1rem 0; } }
   .watch__sale-price {
     font-size: 1.8rem;
     font-family: Constantia;
@@ -1267,7 +1269,8 @@ body {
     color: #183A60; }
     @media only screen and (max-width: 37.5em) {
       .watch__sale-price {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        padding: 1rem 0; } }
   .watch__sale-info {
     font-size: 1.6rem;
     font-family: Constantia;
@@ -1276,7 +1279,8 @@ body {
     color: #183A60; }
     @media only screen and (max-width: 37.5em) {
       .watch__sale-info {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        padding: 1rem 0; } }
   .watch__sale-header {
     font-size: 1.8rem;
     font-family: Constantia;
@@ -1289,9 +1293,13 @@ body {
     border-top: 1px solid #183A60; }
     @media only screen and (max-width: 37.5em) {
       .watch__sale-header {
-        font-size: 1.4rem; } }
+        font-size: 1.4rem;
+        padding: 1rem 0; } }
   .watch__sale-color {
     padding: 4rem 0; }
+    @media only screen and (max-width: 37.5em) {
+      .watch__sale-color {
+        padding: 1rem 0; } }
     .watch__sale-color h2 {
       text-transform: uppercase;
       font-size: 1.2rem;
