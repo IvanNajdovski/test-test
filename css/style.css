@@ -1219,7 +1219,10 @@ body {
       height: 100%;
       width: 100%; } }
   .watch__sale-img {
-    width: 70% !important; }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .watch__sale-box {
     background-color: #F6F6F6;
     display: flex;
@@ -1228,13 +1231,15 @@ body {
     @media only screen and (max-width: 37.5em) {
       .watch__sale-box {
         flex-direction: column;
-        height: 100%;
-        width: 50%; } }
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 90%; } }
     .watch__sale-box > * {
       flex: 0 0 50%; }
       @media only screen and (max-width: 37.5em) {
         .watch__sale-box > * {
-          flex: 0 1; } }
+          flex: 0 0 50%; } }
   .watch__sale-text {
     display: flex;
     flex-direction: column;
