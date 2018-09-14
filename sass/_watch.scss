@@ -10,6 +10,14 @@
   top: 0;
   left:0;
   display: none;
+  @media only screen and (max-width: $bp-small) {
+
+    height: 100%;
+    width: 100%;
+  }
+  &-img{
+    width: 70% !important;
+  }
   &-box{
     background-color: #F6F6F6;
     display: flex;
@@ -17,12 +25,14 @@
     position: relative;
     @media only screen and (max-width: $bp-small) {
      flex-direction: column;
+      height: 100%;
+      width: 50%;
     }
-    
-
-
     &>*{
-      flex: 0 0 50%
+      flex: 0 0 50%;
+      @media only screen and (max-width: $bp-small) {
+        flex: 0 1;
+      }
     }
   }
 
@@ -31,6 +41,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      padding: 2rem 0;
+    }
   }
   &-name{
     font-size: 1.8rem;
@@ -41,6 +54,9 @@
     text-transform: uppercase;
 
     border-bottom: 1px solid #183A60;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
   }
   &-price{
     font-size: 1.8rem;
@@ -48,6 +64,9 @@
     font-weight: 400;
     padding: 2rem 0;
     color: #183A60;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
 
   }
   &-info{
@@ -56,6 +75,9 @@
     font-weight: 200;
     padding: 2rem 0;
     color: #183A60;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
 
   }
   &-header{
@@ -69,6 +91,9 @@
 
     border-bottom: 1px solid #183A60;
     border-top: 1px solid #183A60;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
 
   }
   &-color{
@@ -85,11 +110,16 @@
       display: flex;
       align-items: center;
       padding-top: .5rem;
+      flex-wrap: wrap;
       & >*{
         height: 30px;
         width: 30px;
         border-radius: 50px;
         border: 2px solid #fff;
+        @media only screen and (max-width: $bp-small) {
+          height: 15px;
+          width: 15px;
+        }
       }
     }
   }
@@ -101,6 +131,10 @@
 .watch-img{
   width: 100%;
   height: auto;
+  @media only screen and (max-width: $bp-small) {
+    width: 70%;
+    height: auto;
+  }
 }
 .button-close{
   padding: 1rem;
