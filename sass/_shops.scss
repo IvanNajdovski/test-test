@@ -3,9 +3,15 @@
   position: relative;
   padding-bottom: 3rem;
   background-color: #fff;
+  overflow: hidden;
+  
   & img{
     width: 100%;
     height: auto;
+    object-fit: cover;
+    @media only screen and(max-width: $bp-small){
+      width: 200%;
+    }
 
 
   }
